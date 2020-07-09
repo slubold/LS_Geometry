@@ -10,3 +10,4 @@ Files:
 5) Rank_Estimator.py: This file estimates the rank of the LS from the estimated distance matrix. 
 6) Supplementary_Files.py: This file contains supplementary files needed to run the above files. For example, it contains code to estimate 
 the matrix that contains the probabilities of connections between LS locations, denoted by P, from the graph.
+7) celeagsn131matrix.csv: This file contains the adjacency matrix of a neuron network in a C. Elegans. This data can be accessed here: https://www.dynamic-connectome.org/?page_id=25
