@@ -5,4 +5,8 @@ The code in this repository implements the geometry classification methods from 
 Files:
 1) Classification.py: This file takes as input the adjacency matrix of the graph and outputs the classification of the LS (Euclidean, spherical, or hyperbolic). It also outputs the LS dimension and the LS curvature.
 2) Bootstrap.py: This file implements the bootstrapping method from Romano et al.
-3) Compute_Rate.py: This file estimatates the parameter [\beta](https://latex.codecogs.com/svg.latex?x%3D%5Cfrac%7B-b%5Cpm%5Csqrt%7Bb%5E2-4ac%7D%7D%7B2a%7D)
+3) Compute_Rate.py: This file estimatates the parameter \beta that appears in the Assumption 1 of Romano et al. 
+4) Estimate_Curvature.py: This file estimates the curvature of the LS from the estimated distance matrix.
+5) Rank_Estimator.py: This file estimates the rank of the LS from the estimated distance matrix. 
+6) Supplementary_Files.py: This file contains supplementary files needed to run the above files. For example, it contains code to estimate 
+the matrix that contains the probabilities of connections between LS locations, denoted by P, from the graph.
