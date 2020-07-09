@@ -31,7 +31,7 @@ def Bootstrap_Romano(Y, cliques, clique_size, K, E_nu, J, lambdaHat, alpha, m, g
             lambdaStar[i] = np.linalg.eigvalsh(cStar)[0] - lambdaHat
 
         if geometry == "Hyperbolic":
-            cStar = np.cosh(np.sqrt(kappa) * dStar)
+            cStar = np.cosh(dStar * np.sqrt(kappa))
             if index == -2:
                 lambdaStar[i] = np.linalg.eigvalsh(cStar)[-2] - lambdaHat
 
