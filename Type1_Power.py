@@ -141,7 +141,7 @@ time_simulation = time.strftime("%Y%m%d-%H%M%S")
 results_dictionary = {'parameters': P, 'results': results}
 
 # enter file name here
-file_name = file_name #'Power_Using_M468/final_ES/geometry_true_' + P['geometry_true'] +'_geometry_test' + P['geometry_test'] + str(JOBID) + time_simulation + '.pickle'
+file_name = 'file_name' #'Power_Using_M468/final_ES/geometry_true_' + P['geometry_true'] +'_geometry_test' + P['geometry_test'] + str(JOBID) + time_simulation + '.pickle'
 
 with open(file_name, 'wb') as handle:
     pickle.dump(results_dictionary, handle, protocol = pickle.HIGHEST_PROTOCOL)
