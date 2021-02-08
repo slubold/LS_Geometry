@@ -1,6 +1,6 @@
 # LS Geometry
 
-The code in this repository implements the geometry classification methods from *Identifying Latent Space Geometry in Network Models using Analysis of Curvature* by Lubold et al. The list of files is below. Please send suggestions or comments to Shane Lubold at sl223@uw.edu!
+The code in this repository implements the geometry classification methods from *Identifying Latent Space Geometry in Network Models using Analysis of Curvature* by Lubold et al (https://arxiv.org/abs/2012.10559). The list of files is below. Send questions or comments to Shane Lubold at sl223@uw.edu.
 
 Files:
 1) Classification.py: This file takes as input the adjacency matrix of the graph and outputs the classification of the LS (Euclidean, spherical, or hyperbolic). It also outputs the LS dimension and the LS curvature.
