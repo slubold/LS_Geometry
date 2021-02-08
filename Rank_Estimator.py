@@ -9,7 +9,7 @@ import pickle
 def RankEstimate(FHat, K, B, Y, clique, clique_size, E_nu, J, geometry, kappaHat):
 
     # First compute eigenvalues, eigenvectors of FHat
-    eigvalFHat, eigvecFHat = np.linalg.eig(FHat @ FHat)
+    eigvalFHat, eigvecFHat = np.linalg.eig(FHat)
     idx = eigvalFHat.argsort()[::-1]
     eigvalFHat = eigvalFHat[idx] # sort the eigenvalues in decreasing order.
     eigvecFHat = eigvecFHat[:,idx] # sort the eigenvectors in decreasing order.
@@ -31,15 +31,16 @@ def RankEstimate(FHat, K, B, Y, clique, clique_size, E_nu, J, geometry, kappaHat
         np.fill_diagonal(PB, E_nu)
         DB = -np.log(PB/E_nu)
         np.fill_diagonal(DB, 0)
-        if geometry == 'Euclidean':
+        if geometry == 'E':
             FB = -1/2 * J @ np.square(DB) @ J
             eigval, eigvec = np.linalg.eig(FB)
-        if geometry == 'Spherical':
+        if geometry == 'S':
             CB = np.cos(DB * np.sqrt(kappaHat))
             eigval, eigvec = np.linalg.eig(CB)
-        if geometry == 'Hyperbolic':
+        if geometry == 'H':
             CB = np.cosh(np.sqrt(-kappaHat) * DB)
             eigval, eigvec = np.linalg.eig(CB @ CB)
+        #
         idx = eigval.argsort()[::-1]
         eigval = eigval[idx] # sort the eigenvalues in decreasing order.
         eigvec = eigvec[:,idx]
@@ -62,5 +63,6 @@ def RankEstimate(FHat, K, B, Y, clique, clique_size, E_nu, J, geometry, kappaHat
 
     def g(k):
         return(fn(k) + phi(k))
-    valueC = [g(j) for j in range(K-1)] 
+
+    valueC = [g(j) for j in range(K-1)]
     return(np.argmin(valueC))
