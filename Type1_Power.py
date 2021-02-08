@@ -16,7 +16,8 @@ from datetime import datetime
 import time
 import os
 
-JOBID = int(os.getenv('SLURM_ARRAY_TASK_ID', 0)) # saves the job ID when running on the cluster
+# Uncomment this line of code if running on a cluster.
+#JOBID = int(os.getenv('SLURM_ARRAY_TASK_ID', 0)) # saves the job ID when running on the cluster
 
 
 # Set parameters P
@@ -139,10 +140,10 @@ time_simulation = time.strftime("%Y%m%d-%H%M%S")
 
 results_dictionary = {'parameters': P, 'results': results}
 
-file_name = 'Power_Using_M468/final_ES/geometry_true_' + P['geometry_true'] +
-        '_geometry_test' + P['geometry_test'] + str(JOBID) + time_simulation + '.pickle'
+# enter file name here
+file_name = file_name #'Power_Using_M468/final_ES/geometry_true_' + P['geometry_true'] +'_geometry_test' + P['geometry_test'] + str(JOBID) + time_simulation + '.pickle'
 
 with open(file_name, 'wb') as handle:
     pickle.dump(results_dictionary, handle, protocol = pickle.HIGHEST_PROTOCOL)
 
-print("saving complete")
+
