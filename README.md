@@ -11,5 +11,5 @@ Files:
 - Generate_Hyperbolic.py: Simulates positions and distances on hyperbolic space.
 - Make_D_Spherical.py: Simulates positions and distances on spherical space. 
 - Make_Euclidean_D.py: Simulates positions and distances on Euclidean space. 
-- Rank_Estimator.py: Estimates the rank of a matrix from a noisy estimate of the matrix. We implement the "laddle" estimator from https://academic.oup.com/biomet/article-abstract/103/4/875/2659039. 
+- Rank_Estimator.py: Estimates the rank of a matrix from a noisy estimate of the matrix. We implement the "ladle" estimator from https://academic.oup.com/biomet/article-abstract/103/4/875/2659039. 
 - Supplementary_Files: Contains various pieces of code that we need, such as estimating the distance matrix from the adjacency matrix.
