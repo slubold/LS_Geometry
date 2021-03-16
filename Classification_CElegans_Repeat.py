@@ -10,7 +10,6 @@ import pickle
 from datetime import datetime
 import time
 
-print("hey") 
 
 JOBID = int(os.getenv('SLURM_ARRAY_TASK_ID', 0)) # saves the job ID when running on the cluster
 
@@ -81,8 +80,6 @@ def Return_Classification(Y, clique_size, K, m, mode, computeRate, finalCliques 
         kappaHat = kappaHat_H
 
     return([classification_max, p_E, p_S, p_H, kappaHat_S, kappaHat_H, a, b])
-
-print("here we go")
 
 #sim_number = JOBID % 10 
 time_simulation = time.strftime("%Y%m%d-%H%M%S")
