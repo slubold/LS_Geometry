@@ -103,7 +103,6 @@ m = 3 #clique_size - 1
 t = clique_number - 2
 
 while 1:
-    print("doing it again")
     indices, min_obj, found_min, dHat, temp, E_nu  = PickCliquesFeasible(n, K, Y, cliques, numSamples, int(clique_size), t)
     print(found_min)
     if found_min == True:
